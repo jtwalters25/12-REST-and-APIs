@@ -11,7 +11,7 @@
       url:'https://api.github.com/user/repos?type=owner&sort=created',
       type:'GET',
       headers: {
-        Authorization: 'token ' + githubToken
+        Authorization: `token ${githubToken}`
       }
     }).done(function(data) {
       repos.all = data

@@ -14,8 +14,7 @@
   // TODid: Remember that new Handlebars template? Let's compile it!
   // Save the result in this `render` variable.
   // var template = Handlebars.compile($('#repo-template').text());
-  var source = $('#repo-template').html();
-  var render = Handlebars.compile(source);
+  var render = Handlebars.compile($('#repo-template').text());
   repoView.index = function() {
     ui();
 
