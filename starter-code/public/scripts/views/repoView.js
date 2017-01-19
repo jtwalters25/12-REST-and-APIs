@@ -8,15 +8,16 @@
     let $about = $('#about'); // Best practice: Cache the DOM query if it's used more than once.
 
     $about.find('ul').empty();
-    $about.show().siblings().hide();
+    // $about.show().siblings().hide();
   };
 
   // TODid: Remember that new Handlebars template? Let's compile it!
   // Save the result in this `render` variable.
   // var template = Handlebars.compile($('#repo-template').text());
-  var render = Handlebars.compile($('#repo-template').text());
   repoView.index = function() {
     ui();
+    const render = Handlebars.compile($('#repo-template').text());
+
 
     // The jQuery `append` method lets us append an entire array of HTML elements at once:
     $('#about ul').append(
