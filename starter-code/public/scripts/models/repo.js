@@ -8,7 +8,7 @@
   repos.requestRepos = function(callback) {
     // TODid: How would you like to fetch your repos? Don't forget to call the callback.
     $.ajax({
-      url:'https://api.github.com/user/repos?type=owner&sort=created',
+      url:'https://api.github.com/users/jtwalters25/repos',
       type:'GET',
       headers: {
         Authorization: `token ${githubToken}`
