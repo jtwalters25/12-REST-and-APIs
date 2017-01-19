@@ -11,9 +11,11 @@
     $about.show().siblings().hide();
   };
 
-  // TODO: Remember that new Handlebars template? Let's compile it!
+  // TODid: Remember that new Handlebars template? Let's compile it!
   // Save the result in this `render` variable.
-
+  // var template = Handlebars.compile($('#repo-template').text());
+  var source = $('#repo-template').html();
+  var render = Handlebars.compile(source);
   repoView.index = function() {
     ui();
 

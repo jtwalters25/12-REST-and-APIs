@@ -6,7 +6,17 @@
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    // TODO: How would you like to fetch your repos? Don't forget to call the callback.
+    // TODid: How would you like to fetch your repos? Don't forget to call the callback.
+    $.ajax({
+      url:'https://api.github.com/user/repos?type=owner&sort=created',
+      type:'GET',
+      headers: {
+        Authorization: 'token ' + githubToken
+      }
+    }).done(function(data) {
+      repos.all = data
+      callback();
+    });
 
   };
 
